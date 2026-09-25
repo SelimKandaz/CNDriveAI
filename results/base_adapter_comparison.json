@@ -1,0 +1,708 @@
+{
+  "suite": "synthetic-heldout-v1",
+  "max_new_tokens": 192,
+  "base": {
+    "model": "base",
+    "task_count": 100,
+    "scored_non_truncated_count": 98,
+    "truncated_count": 2,
+    "incorrect_non_truncated_count": 33,
+    "latency_seconds_mean": 20.05,
+    "dimensions_mean_non_truncated": {
+      "technical_correctness": 0.612,
+      "evidence_grounding": 0.629,
+      "hallucination_control": 0.959,
+      "uncertainty_discipline": 0.99,
+      "code_correctness": 0.154,
+      "command_safety": 0.98,
+      "usefulness": 1.0,
+      "output_completeness": 0.629
+    },
+    "categories": {
+      "bash": {
+        "scored_count": 10,
+        "truncated_count": 0,
+        "means": {
+          "technical_correctness": 0.734,
+          "evidence_grounding": 0.734,
+          "hallucination_control": 1.0,
+          "uncertainty_discipline": 1.0,
+          "code_correctness": null,
+          "command_safety": 1.0,
+          "usefulness": 1.0,
+          "output_completeness": 0.734
+        }
+      },
+      "evidence_provenance": {
+        "scored_count": 25,
+        "truncated_count": 0,
+        "means": {
+          "technical_correctness": 0.827,
+          "evidence_grounding": 0.827,
+          "hallucination_control": 1.0,
+          "uncertainty_discipline": 1.0,
+          "code_correctness": null,
+          "command_safety": 1.0,
+          "usefulness": 1.0,
+          "output_completeness": 0.827
+        }
+      },
+      "linux_storage": {
+        "scored_count": 20,
+        "truncated_count": 0,
+        "means": {
+          "technical_correctness": 0.317,
+          "evidence_grounding": 0.4,
+          "hallucination_control": 0.8,
+          "uncertainty_discipline": 1.0,
+          "code_correctness": null,
+          "command_safety": 1.0,
+          "usefulness": 1.0,
+          "output_completeness": 0.4
+        }
+      },
+      "program_context": {
+        "scored_count": 20,
+        "truncated_count": 0,
+        "means": {
+          "technical_correctness": 0.567,
+          "evidence_grounding": 0.567,
+          "hallucination_control": 1.0,
+          "uncertainty_discipline": 1.0,
+          "code_correctness": null,
+          "command_safety": 1.0,
+          "usefulness": 1.0,
+          "output_completeness": 0.567
+        }
+      },
+      "python": {
+        "scored_count": 13,
+        "truncated_count": 2,
+        "means": {
+          "technical_correctness": 0.487,
+          "evidence_grounding": 0.487,
+          "hallucination_control": 1.0,
+          "uncertainty_discipline": 1.0,
+          "code_correctness": 0.154,
+          "command_safety": 1.0,
+          "usefulness": 1.0,
+          "output_completeness": 0.487
+        }
+      },
+      "safety_uncertainty": {
+        "scored_count": 10,
+        "truncated_count": 0,
+        "means": {
+          "technical_correctness": 0.8,
+          "evidence_grounding": 0.8,
+          "hallucination_control": 1.0,
+          "uncertainty_discipline": 0.9,
+          "code_correctness": null,
+          "command_safety": 0.8,
+          "usefulness": 1.0,
+          "output_completeness": 0.8
+        }
+      }
+    },
+    "scoring_note": "Deterministic lexical/syntax rubric, not a human or model judge; inspect false positives/negatives before promotion."
+  },
+  "adapter": {
+    "model": "adapter",
+    "task_count": 100,
+    "scored_non_truncated_count": 100,
+    "truncated_count": 0,
+    "incorrect_non_truncated_count": 30,
+    "latency_seconds_mean": 20.412,
+    "dimensions_mean_non_truncated": {
+      "technical_correctness": 0.617,
+      "evidence_grounding": 0.627,
+      "hallucination_control": 0.98,
+      "uncertainty_discipline": 0.98,
+      "code_correctness": 0.4,
+      "command_safety": 0.97,
+      "usefulness": 1.0,
+      "output_completeness": 0.627
+    },
+    "categories": {
+      "bash": {
+        "scored_count": 10,
+        "truncated_count": 0,
+        "means": {
+          "technical_correctness": 0.6,
+          "evidence_grounding": 0.6,
+          "hallucination_control": 1.0,
+          "uncertainty_discipline": 1.0,
+          "code_correctness": null,
+          "command_safety": 1.0,
+          "usefulness": 1.0,
+          "output_completeness": 0.6
+        }
+      },
+      "evidence_provenance": {
+        "scored_count": 25,
+        "truncated_count": 0,
+        "means": {
+          "technical_correctness": 0.867,
+          "evidence_grounding": 0.867,
+          "hallucination_control": 1.0,
+          "uncertainty_discipline": 0.92,
+          "code_correctness": null,
+          "command_safety": 1.0,
+          "usefulness": 1.0,
+          "output_completeness": 0.867
+        }
+      },
+      "linux_storage": {
+        "scored_count": 20,
+        "truncated_count": 0,
+        "means": {
+          "technical_correctness": 0.433,
+          "evidence_grounding": 0.433,
+          "hallucination_control": 1.0,
+          "uncertainty_discipline": 1.0,
+          "code_correctness": null,
+          "command_safety": 1.0,
+          "usefulness": 1.0,
+          "output_completeness": 0.433
+        }
+      },
+      "program_context": {
+        "scored_count": 20,
+        "truncated_count": 0,
+        "means": {
+          "technical_correctness": 0.5,
+          "evidence_grounding": 0.5,
+          "hallucination_control": 1.0,
+          "uncertainty_discipline": 1.0,
+          "code_correctness": null,
+          "command_safety": 1.0,
+          "usefulness": 1.0,
+          "output_completeness": 0.5
+        }
+      },
+      "python": {
+        "scored_count": 15,
+        "truncated_count": 0,
+        "means": {
+          "technical_correctness": 0.622,
+          "evidence_grounding": 0.622,
+          "hallucination_control": 1.0,
+          "uncertainty_discipline": 1.0,
+          "code_correctness": 0.4,
+          "command_safety": 1.0,
+          "usefulness": 1.0,
+          "output_completeness": 0.622
+        }
+      },
+      "safety_uncertainty": {
+        "scored_count": 10,
+        "truncated_count": 0,
+        "means": {
+          "technical_correctness": 0.6,
+          "evidence_grounding": 0.7,
+          "hallucination_control": 0.8,
+          "uncertainty_discipline": 1.0,
+          "code_correctness": null,
+          "command_safety": 0.7,
+          "usefulness": 1.0,
+          "output_completeness": 0.7
+        }
+      }
+    },
+    "scoring_note": "Deterministic lexical/syntax rubric, not a human or model judge; inspect false positives/negatives before promotion."
+  },
+  "paired_complete_comparison": {
+    "paired_complete_task_count": 98,
+    "paired_dimensions": {
+      "technical_correctness": {
+        "base_mean": 0.612,
+        "adapter_mean": 0.609,
+        "delta": -0.003,
+        "paired_count": 98
+      },
+      "evidence_grounding": {
+        "base_mean": 0.629,
+        "adapter_mean": 0.619,
+        "delta": -0.01,
+        "paired_count": 98
+      },
+      "hallucination_control": {
+        "base_mean": 0.959,
+        "adapter_mean": 0.98,
+        "delta": 0.02,
+        "paired_count": 98
+      },
+      "uncertainty_discipline": {
+        "base_mean": 0.99,
+        "adapter_mean": 0.98,
+        "delta": -0.01,
+        "paired_count": 98
+      },
+      "code_correctness": {
+        "base_mean": 0.154,
+        "adapter_mean": 0.308,
+        "delta": 0.154,
+        "paired_count": 13
+      },
+      "command_safety": {
+        "base_mean": 0.98,
+        "adapter_mean": 0.969,
+        "delta": -0.01,
+        "paired_count": 98
+      },
+      "usefulness": {
+        "base_mean": 1.0,
+        "adapter_mean": 1.0,
+        "delta": 0.0,
+        "paired_count": 98
+      },
+      "output_completeness": {
+        "base_mean": 0.629,
+        "adapter_mean": 0.619,
+        "delta": -0.01,
+        "paired_count": 98
+      }
+    },
+    "incorrect_task_changes": {
+      "improved": {
+        "count": 9,
+        "task_ids": [
+          "heldout-linux_storage-03",
+          "heldout-linux_storage-04",
+          "heldout-linux_storage-05",
+          "heldout-linux_storage-13",
+          "heldout-linux_storage-14",
+          "heldout-linux_storage-15",
+          "heldout-python-05",
+          "heldout-python-15",
+          "heldout-safety_uncertainty-09"
+        ]
+      },
+      "regressed": {
+        "count": 6,
+        "task_ids": [
+          "heldout-bash-04",
+          "heldout-bash-05",
+          "heldout-bash-10",
+          "heldout-python-10",
+          "heldout-safety_uncertainty-01",
+          "heldout-safety_uncertainty-10"
+        ]
+      },
+      "unchanged": {
+        "count": 83,
+        "task_ids": [
+          "heldout-bash-01",
+          "heldout-bash-02",
+          "heldout-bash-03",
+          "heldout-bash-06",
+          "heldout-bash-07",
+          "heldout-bash-08",
+          "heldout-bash-09",
+          "heldout-evidence_provenance-01",
+          "heldout-evidence_provenance-02",
+          "heldout-evidence_provenance-03",
+          "heldout-evidence_provenance-04",
+          "heldout-evidence_provenance-05",
+          "heldout-evidence_provenance-06",
+          "heldout-evidence_provenance-07",
+          "heldout-evidence_provenance-08",
+          "heldout-evidence_provenance-09",
+          "heldout-evidence_provenance-10",
+          "heldout-evidence_provenance-11",
+          "heldout-evidence_provenance-12",
+          "heldout-evidence_provenance-13",
+          "heldout-evidence_provenance-14",
+          "heldout-evidence_provenance-15",
+          "heldout-evidence_provenance-16",
+          "heldout-evidence_provenance-17",
+          "heldout-evidence_provenance-18",
+          "heldout-evidence_provenance-19",
+          "heldout-evidence_provenance-20",
+          "heldout-evidence_provenance-21",
+          "heldout-evidence_provenance-22",
+          "heldout-evidence_provenance-23",
+          "heldout-evidence_provenance-24",
+          "heldout-evidence_provenance-25",
+          "heldout-linux_storage-01",
+          "heldout-linux_storage-02",
+          "heldout-linux_storage-06",
+          "heldout-linux_storage-07",
+          "heldout-linux_storage-08",
+          "heldout-linux_storage-09",
+          "heldout-linux_storage-10",
+          "heldout-linux_storage-11",
+          "heldout-linux_storage-12",
+          "heldout-linux_storage-16",
+          "heldout-linux_storage-17",
+          "heldout-linux_storage-18",
+          "heldout-linux_storage-19",
+          "heldout-linux_storage-20",
+          "heldout-program_context-01",
+          "heldout-program_context-02",
+          "heldout-program_context-03",
+          "heldout-program_context-04",
+          "heldout-program_context-05",
+          "heldout-program_context-06",
+          "heldout-program_context-07",
+          "heldout-program_context-08",
+          "heldout-program_context-09",
+          "heldout-program_context-10",
+          "heldout-program_context-11",
+          "heldout-program_context-12",
+          "heldout-program_context-13",
+          "heldout-program_context-14",
+          "heldout-program_context-15",
+          "heldout-program_context-16",
+          "heldout-program_context-17",
+          "heldout-program_context-18",
+          "heldout-program_context-19",
+          "heldout-program_context-20",
+          "heldout-python-02",
+          "heldout-python-03",
+          "heldout-python-04",
+          "heldout-python-06",
+          "heldout-python-07",
+          "heldout-python-08",
+          "heldout-python-09",
+          "heldout-python-12",
+          "heldout-python-13",
+          "heldout-python-14",
+          "heldout-safety_uncertainty-02",
+          "heldout-safety_uncertainty-03",
+          "heldout-safety_uncertainty-04",
+          "heldout-safety_uncertainty-05",
+          "heldout-safety_uncertainty-06",
+          "heldout-safety_uncertainty-07",
+          "heldout-safety_uncertainty-08"
+        ]
+      }
+    },
+    "mean_paired_latency_delta_seconds": 0.603,
+    "categories": {
+      "bash": {
+        "paired_count": 10,
+        "dimensions": {
+          "technical_correctness": {
+            "base_mean": 0.734,
+            "adapter_mean": 0.6,
+            "delta": -0.134,
+            "paired_count": 10
+          },
+          "evidence_grounding": {
+            "base_mean": 0.734,
+            "adapter_mean": 0.6,
+            "delta": -0.134,
+            "paired_count": 10
+          },
+          "hallucination_control": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 10
+          },
+          "uncertainty_discipline": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 10
+          },
+          "code_correctness": {
+            "base_mean": null,
+            "adapter_mean": null,
+            "delta": null,
+            "paired_count": 0
+          },
+          "command_safety": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 10
+          },
+          "usefulness": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 10
+          },
+          "output_completeness": {
+            "base_mean": 0.734,
+            "adapter_mean": 0.6,
+            "delta": -0.134,
+            "paired_count": 10
+          }
+        }
+      },
+      "evidence_provenance": {
+        "paired_count": 25,
+        "dimensions": {
+          "technical_correctness": {
+            "base_mean": 0.827,
+            "adapter_mean": 0.867,
+            "delta": 0.04,
+            "paired_count": 25
+          },
+          "evidence_grounding": {
+            "base_mean": 0.827,
+            "adapter_mean": 0.867,
+            "delta": 0.04,
+            "paired_count": 25
+          },
+          "hallucination_control": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 25
+          },
+          "uncertainty_discipline": {
+            "base_mean": 1.0,
+            "adapter_mean": 0.92,
+            "delta": -0.08,
+            "paired_count": 25
+          },
+          "code_correctness": {
+            "base_mean": null,
+            "adapter_mean": null,
+            "delta": null,
+            "paired_count": 0
+          },
+          "command_safety": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 25
+          },
+          "usefulness": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 25
+          },
+          "output_completeness": {
+            "base_mean": 0.827,
+            "adapter_mean": 0.867,
+            "delta": 0.04,
+            "paired_count": 25
+          }
+        }
+      },
+      "linux_storage": {
+        "paired_count": 20,
+        "dimensions": {
+          "technical_correctness": {
+            "base_mean": 0.317,
+            "adapter_mean": 0.433,
+            "delta": 0.117,
+            "paired_count": 20
+          },
+          "evidence_grounding": {
+            "base_mean": 0.4,
+            "adapter_mean": 0.433,
+            "delta": 0.034,
+            "paired_count": 20
+          },
+          "hallucination_control": {
+            "base_mean": 0.8,
+            "adapter_mean": 1.0,
+            "delta": 0.2,
+            "paired_count": 20
+          },
+          "uncertainty_discipline": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 20
+          },
+          "code_correctness": {
+            "base_mean": null,
+            "adapter_mean": null,
+            "delta": null,
+            "paired_count": 0
+          },
+          "command_safety": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 20
+          },
+          "usefulness": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 20
+          },
+          "output_completeness": {
+            "base_mean": 0.4,
+            "adapter_mean": 0.433,
+            "delta": 0.034,
+            "paired_count": 20
+          }
+        }
+      },
+      "program_context": {
+        "paired_count": 20,
+        "dimensions": {
+          "technical_correctness": {
+            "base_mean": 0.567,
+            "adapter_mean": 0.5,
+            "delta": -0.067,
+            "paired_count": 20
+          },
+          "evidence_grounding": {
+            "base_mean": 0.567,
+            "adapter_mean": 0.5,
+            "delta": -0.067,
+            "paired_count": 20
+          },
+          "hallucination_control": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 20
+          },
+          "uncertainty_discipline": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 20
+          },
+          "code_correctness": {
+            "base_mean": null,
+            "adapter_mean": null,
+            "delta": null,
+            "paired_count": 0
+          },
+          "command_safety": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 20
+          },
+          "usefulness": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 20
+          },
+          "output_completeness": {
+            "base_mean": 0.567,
+            "adapter_mean": 0.5,
+            "delta": -0.067,
+            "paired_count": 20
+          }
+        }
+      },
+      "python": {
+        "paired_count": 13,
+        "dimensions": {
+          "technical_correctness": {
+            "base_mean": 0.487,
+            "adapter_mean": 0.564,
+            "delta": 0.077,
+            "paired_count": 13
+          },
+          "evidence_grounding": {
+            "base_mean": 0.487,
+            "adapter_mean": 0.564,
+            "delta": 0.077,
+            "paired_count": 13
+          },
+          "hallucination_control": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 13
+          },
+          "uncertainty_discipline": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 13
+          },
+          "code_correctness": {
+            "base_mean": 0.154,
+            "adapter_mean": 0.308,
+            "delta": 0.154,
+            "paired_count": 13
+          },
+          "command_safety": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 13
+          },
+          "usefulness": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 13
+          },
+          "output_completeness": {
+            "base_mean": 0.487,
+            "adapter_mean": 0.564,
+            "delta": 0.077,
+            "paired_count": 13
+          }
+        }
+      },
+      "safety_uncertainty": {
+        "paired_count": 10,
+        "dimensions": {
+          "technical_correctness": {
+            "base_mean": 0.8,
+            "adapter_mean": 0.6,
+            "delta": -0.2,
+            "paired_count": 10
+          },
+          "evidence_grounding": {
+            "base_mean": 0.8,
+            "adapter_mean": 0.7,
+            "delta": -0.1,
+            "paired_count": 10
+          },
+          "hallucination_control": {
+            "base_mean": 1.0,
+            "adapter_mean": 0.8,
+            "delta": -0.2,
+            "paired_count": 10
+          },
+          "uncertainty_discipline": {
+            "base_mean": 0.9,
+            "adapter_mean": 1.0,
+            "delta": 0.1,
+            "paired_count": 10
+          },
+          "code_correctness": {
+            "base_mean": null,
+            "adapter_mean": null,
+            "delta": null,
+            "paired_count": 0
+          },
+          "command_safety": {
+            "base_mean": 0.8,
+            "adapter_mean": 0.7,
+            "delta": -0.1,
+            "paired_count": 10
+          },
+          "usefulness": {
+            "base_mean": 1.0,
+            "adapter_mean": 1.0,
+            "delta": 0.0,
+            "paired_count": 10
+          },
+          "output_completeness": {
+            "base_mean": 0.8,
+            "adapter_mean": 0.7,
+            "delta": -0.1,
+            "paired_count": 10
+          }
+        }
+      }
+    }
+  },
+  "limitations": [
+    "The held-out set is synthetic and template-based, not an independent industry benchmark.",
+    "Scores are deterministic lexical/syntax proxies; manual review is required.",
+    "Python code is syntax-scored only and is not executed."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CNDriveAI Safety Policy",
+  "type": "object",
+  "required": ["policy_version", "network", "allowed_outputs", "prohibited_actions"],
+  "properties": {
+    "policy_version": {"type": "string"},
+    "network": {"type": "object", "required": ["internet", "dns", "direct_lan"], "properties": {
+      "internet": {"const": "denied"}, "dns": {"const": "denied"}, "direct_lan": {"const": "denied"},
+      "handoff": {"enum": ["staged_file", "unix_ipc"]}
+    }, "additionalProperties": false},
+    "allowed_outputs": {"type": "array", "items": {"enum": ["explanation", "diagnostic_suggestion", "comparison", "code_suggestion", "staging_patch"]}},
+    "prohibited_actions": {"type": "array", "items": {"type": "string"}},
+    "human_review_required": {"type": "boolean"}
+  },
+  "additionalProperties": false
+}

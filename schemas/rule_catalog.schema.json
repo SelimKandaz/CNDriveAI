@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Authoritative Rule Catalog",
+  "type": "object",
+  "required": ["version", "source_ref", "rules"],
+  "properties": {
+    "version": {"type": "string"},
+    "source_ref": {"type": "string"},
+    "rules": {"type": "array", "items": {"type": "object", "required": ["rule_id", "statement", "authority"], "properties": {
+      "rule_id": {"type": "string"}, "statement": {"type": "string"},
+      "authority": {"const": "authoritative"}, "effective_from": {"type": ["string", "null"]},
+      "evidence_refs": {"type": "array", "items": {"type": "string"}}
+    }, "additionalProperties": false}}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/cndriveai/system_context.schema.json",
+  "title": "Generic System Context",
+  "type": "object",
+  "required": ["contract_version", "system_name", "environment", "network_policy", "safety_policy_ref"],
+  "properties": {
+    "contract_version": {"const": "1.0"},
+    "system_name": {"type": "string", "minLength": 1},
+    "environment": {"type": "string"},
+    "program_version_ref": {"type": "string"},
+    "network_policy": {"type": "object", "required": ["host_network", "assistant_network"], "properties": {
+      "host_network": {"enum": ["enabled", "disabled", "unknown"]},
+      "assistant_network": {"enum": ["denied_by_default", "restricted", "enabled", "unknown"]},
+      "data_exchange": {"enum": ["staged_files", "unix_ipc", "none", "other"]}
+    }, "additionalProperties": false},
+    "safety_policy_ref": {"type": "string"},
+    "authority_notice": {"type": "string"}
+  },
+  "additionalProperties": false
+}

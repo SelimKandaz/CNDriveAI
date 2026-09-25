@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Program Version Context",
+  "type": "object",
+  "required": ["program_id", "version", "source_ref", "captured_utc"],
+  "properties": {
+    "program_id": {"type": "string"},
+    "version": {"type": "string"},
+    "source_ref": {"type": "string"},
+    "schema_versions": {"type": "object", "additionalProperties": {"type": "string"}},
+    "rules_hash": {"type": ["string", "null"]},
+    "captured_utc": {"type": "string"}
+  },
+  "additionalProperties": false
+}

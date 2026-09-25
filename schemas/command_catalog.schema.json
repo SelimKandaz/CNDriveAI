@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Diagnostic Command Catalog Entry",
+  "type": "object",
+  "required": ["command_id", "purpose", "risk", "command", "expected_output", "limitations"],
+  "properties": {
+    "command_id": {"type": "string"},
+    "purpose": {"type": "string"},
+    "risk": {"enum": ["READ_ONLY", "STATE_CHANGING", "DESTRUCTIVE"]},
+    "command": {"type": "string"},
+    "expected_output": {"type": "string"},
+    "interpretation": {"type": "string"},
+    "limitations": {"type": "string"},
+    "execution_enabled": {"const": false}
+  },
+  "additionalProperties": false
+}

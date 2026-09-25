@@ -1,0 +1,116 @@
+{
+  "model": "base",
+  "task_count": 100,
+  "scored_non_truncated_count": 98,
+  "truncated_count": 2,
+  "incorrect_non_truncated_count": 33,
+  "latency_seconds_mean": 20.05,
+  "dimensions_mean_non_truncated": {
+    "technical_correctness": 0.612,
+    "evidence_grounding": 0.629,
+    "hallucination_control": 0.959,
+    "uncertainty_discipline": 0.99,
+    "code_correctness": 0.154,
+    "command_safety": 0.98,
+    "usefulness": 1.0,
+    "output_completeness": 0.629
+  },
+  "categories": {
+    "bash": {
+      "scored_count": 10,
+      "truncated_count": 0,
+      "means": {
+        "technical_correctness": 0.734,
+        "evidence_grounding": 0.734,
+        "hallucination_control": 1.0,
+        "uncertainty_discipline": 1.0,
+        "code_correctness": null,
+        "command_safety": 1.0,
+        "usefulness": 1.0,
+        "output_completeness": 0.734
+      }
+    },
+    "evidence_provenance": {
+      "scored_count": 25,
+      "truncated_count": 0,
+      "means": {
+        "technical_correctness": 0.827,
+        "evidence_grounding": 0.827,
+        "hallucination_control": 1.0,
+        "uncertainty_discipline": 1.0,
+        "code_correctness": null,
+        "command_safety": 1.0,
+        "usefulness": 1.0,
+        "output_completeness": 0.827
+      }
+    },
+    "linux_storage": {
+      "scored_count": 20,
+      "truncated_count": 0,
+      "means": {
+        "technical_correctness": 0.317,
+        "evidence_grounding": 0.4,
+        "hallucination_control": 0.8,
+        "uncertainty_discipline": 1.0,
+        "code_correctness": null,
+        "command_safety": 1.0,
+        "usefulness": 1.0,
+        "output_completeness": 0.4
+      }
+    },
+    "program_context": {
+      "scored_count": 20,
+      "truncated_count": 0,
+      "means": {
+        "technical_correctness": 0.567,
+        "evidence_grounding": 0.567,
+        "hallucination_control": 1.0,
+        "uncertainty_discipline": 1.0,
+        "code_correctness": null,
+        "command_safety": 1.0,
+        "usefulness": 1.0,
+        "output_completeness": 0.567
+      }
+    },
+    "python": {
+      "scored_count": 13,
+      "truncated_count": 2,
+      "means": {
+        "technical_correctness": 0.487,
+        "evidence_grounding": 0.487,
+        "hallucination_control": 1.0,
+        "uncertainty_discipline": 1.0,
+        "code_correctness": 0.154,
+        "command_safety": 1.0,
+        "usefulness": 1.0,
+        "output_completeness": 0.487
+      }
+    },
+    "safety_uncertainty": {
+      "scored_count": 10,
+      "truncated_count": 0,
+      "means": {
+        "technical_correctness": 0.8,
+        "evidence_grounding": 0.8,
+        "hallucination_control": 1.0,
+        "uncertainty_discipline": 0.9,
+        "code_correctness": null,
+        "command_safety": 0.8,
+        "usefulness": 1.0,
+        "output_completeness": 0.8
+      }
+    }
+  },
+  "scoring_note": "Deterministic lexical/syntax rubric, not a human or model judge; inspect false positives/negatives before promotion.",
+  "configuration": {
+    "base_model": "Qwen/Qwen3.5-9B",
+    "base_snapshot_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "quantization": "Quanto int4 weights",
+    "compute_dtype": "bfloat16",
+    "generation": "greedy, do_sample=false",
+    "max_new_tokens": 192,
+    "adapter_loaded": false,
+    "prompt_contract": "same CNDriveAI system message used for training plus held-out user prompt",
+    "metric_source": "raw local completions rescored with current deterministic rubric"
+  }
+}

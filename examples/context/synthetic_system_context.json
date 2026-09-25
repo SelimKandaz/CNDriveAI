@@ -1,0 +1,13 @@
+{
+  "contract_version": "1.0",
+  "system_name": "Synthetic Evidence Program",
+  "environment": "offline-test",
+  "program_version_ref": "synthetic-2.3.0",
+  "network_policy": {
+    "host_network": "enabled",
+    "assistant_network": "denied_by_default",
+    "data_exchange": "staged_files"
+  },
+  "safety_policy_ref": "safety-policy-v1",
+  "authority_notice": "Program rules and product verdicts remain authoritative; assistant output is advisory."
+}

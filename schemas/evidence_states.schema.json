@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence State Semantics",
+  "type": "object",
+  "required": ["field", "value", "status", "source", "time"],
+  "properties": {
+    "field": {"type": "string"},
+    "value": {},
+    "status": {"type": "string", "description": "Preserve source status, including explicit zero; never infer from null."},
+    "source": {"type": "string"},
+    "time": {"type": "string"},
+    "unit": {"type": "string"},
+    "interpretation": {"type": "string"},
+    "confidence": {"enum": ["high", "medium", "low", "not_assessed"]}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,62 @@
+{
+  "data_file": "train.jsonl",
+  "record_count": 104,
+  "prompt_full_prefix_mismatches": 0,
+  "full_sequence_tokens": {
+    "p50": 220,
+    "p75": 239,
+    "p90": 278,
+    "p95": 286,
+    "max": 322
+  },
+  "assistant_response_tokens": {
+    "p50": 57,
+    "p75": 71,
+    "p90": 114,
+    "p95": 118,
+    "max": 153
+  },
+  "truncation_by_max_sequence_length": {
+    "256": {
+      "examples": 104,
+      "any_assistant_tokens_removed": 20,
+      "assistant_tokens_removed": 552,
+      "assistant_tokens_total": 6896,
+      "examples_with_assistant_truncation_pct": 19.23,
+      "assistant_tokens_removed_pct": 8.0
+    },
+    "384": {
+      "examples": 104,
+      "any_assistant_tokens_removed": 0,
+      "assistant_tokens_removed": 0,
+      "assistant_tokens_total": 6896,
+      "examples_with_assistant_truncation_pct": 0.0,
+      "assistant_tokens_removed_pct": 0.0
+    },
+    "512": {
+      "examples": 104,
+      "any_assistant_tokens_removed": 0,
+      "assistant_tokens_removed": 0,
+      "assistant_tokens_total": 6896,
+      "examples_with_assistant_truncation_pct": 0.0,
+      "assistant_tokens_removed_pct": 0.0
+    },
+    "768": {
+      "examples": 104,
+      "any_assistant_tokens_removed": 0,
+      "assistant_tokens_removed": 0,
+      "assistant_tokens_total": 6896,
+      "examples_with_assistant_truncation_pct": 0.0,
+      "assistant_tokens_removed_pct": 0.0
+    },
+    "1024": {
+      "examples": 104,
+      "any_assistant_tokens_removed": 0,
+      "assistant_tokens_removed": 0,
+      "assistant_tokens_total": 6896,
+      "examples_with_assistant_truncation_pct": 0.0,
+      "assistant_tokens_removed_pct": 0.0
+    }
+  },
+  "mask_policy": "Exact tokenizer chat-template prefix required; ambiguous records are not trained."
+}

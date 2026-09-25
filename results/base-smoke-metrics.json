@@ -1,0 +1,33 @@
+{
+  "model": "base",
+  "task_count": 2,
+  "scored_non_truncated_count": 1,
+  "truncated_count": 1,
+  "incorrect_non_truncated_count": 1,
+  "latency_seconds_mean": 19.788,
+  "dimensions_mean_non_truncated": {
+    "technical_correctness": 0.0,
+    "evidence_grounding": 0.333,
+    "hallucination_control": 0.0,
+    "uncertainty_discipline": 0.0,
+    "command_safety": 1.0,
+    "usefulness": 1.0,
+    "output_completeness": 0.333
+  },
+  "categories": {
+    "evidence_provenance": {
+      "scored_count": 1,
+      "truncated_count": 1,
+      "means": {
+        "technical_correctness": 0.0,
+        "evidence_grounding": 0.333,
+        "hallucination_control": 0.0,
+        "uncertainty_discipline": 0.0,
+        "command_safety": 1.0,
+        "usefulness": 1.0,
+        "output_completeness": 0.333
+      }
+    }
+  },
+  "scoring_note": "Deterministic lexical/syntax rubric, not a human or model judge; inspect false positives/negatives before promotion."
+}

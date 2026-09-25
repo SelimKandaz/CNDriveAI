@@ -1,0 +1,31 @@
+{
+  "artifact_type": "CNDRIVETRUST_HEALTH_USAGE_SUMMARY",
+  "schema_version": "2.1",
+  "workflow_version": "2.3.0",
+  "run_id": "HEALTH-SYNTHETIC-20260101T000000Z-0000000000",
+  "observed_utc": "2026-01-01T00:00:00Z",
+  "target": {
+    "manufacturer": "Synthetic Vendor",
+    "model": "Synthetic NVMe Example",
+    "firmware": "SYN-1.0",
+    "transport": "NATIVE_NVME",
+    "capacity_bytes": 1000000000000,
+    "serial": "DO-NOT-USE-REAL-IDENTIFIERS"
+  },
+  "current_values": {
+    "media_errors": {"value": 0, "source": "synthetic fixture", "time": "2026-01-01T00:00:00Z", "status": "0", "unit": "count"},
+    "vendor_media_wear_percent": {"value": null, "source": "synthetic vendor query", "time": "2026-01-01T00:00:00Z", "status": "QUERY_FAILED", "unit": "%"},
+    "power_on_hours": {"value": 4, "source": "synthetic smart log", "time": "2026-01-01T00:00:00Z", "status": "VALUE", "unit": "hours"}
+  },
+  "dimensions": {
+    "media_health": {"state": "GOOD", "explanation": "Synthetic current SMART value passes."},
+    "endurance": {"state": "EXCELLENT", "explanation": "Synthetic reported endurance is low."},
+    "error_state": {"state": "GOOD", "explanation": "Available counters are zero."},
+    "usage": {"state": "LIGHT", "explanation": "Usage is descriptive."},
+    "performance": {"state": "NOT_RUN", "explanation": "No full read result supplied."},
+    "history_trust": {"state": "PARTIAL", "explanation": "Vendor query failed."}
+  },
+  "overall": "PARTIAL",
+  "assessment_limits": ["Synthetic example; not a real device or production result."],
+  "notes": "synthetic-only"
+}

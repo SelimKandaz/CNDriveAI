@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/cndriveai/current_run.schema.json",
+  "title": "Normalized Current Evidence Run",
+  "type": "object",
+  "required": ["artifact_type", "schema_version", "run_id"],
+  "anyOf": [{"required": ["values"]}, {"required": ["current_values"]}],
+  "properties": {
+    "artifact_type": {"enum": ["CNDRIVETRUST_SSD_NVME_EVIDENCE", "CNDRIVETRUST_HEALTH_USAGE_SUMMARY"]},
+    "schema_version": {"type": "string"},
+    "workflow_version": {"type": "string"},
+    "run_id": {"type": "string"},
+    "observed_utc": {"type": "string"},
+    "completed_utc": {"type": "string"},
+    "target": {"type": "object", "properties": {
+      "manufacturer": {"type": ["string", "null"]},
+      "model": {"type": ["string", "null"]},
+      "firmware": {"type": ["string", "null"]},
+      "transport": {"type": ["string", "null"]},
+      "capacity_bytes": {"type": ["integer", "null"]}
+    }, "additionalProperties": true},
+    "values": {"$ref": "#/$defs/valueMap"},
+    "current_values": {"$ref": "#/$defs/valueMap"},
+    "analysis": {"type": "object"},
+    "read_verification": {"type": "object"},
+    "dimensions": {"type": "object"},
+    "overall": {"type": "string"},
+    "assessment_limits": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "valueRecord": {"type": "object", "required": ["value", "status", "source", "time"], "properties": {
+      "value": {}, "status": {"type": "string"}, "source": {"type": "string"},
+      "time": {"type": "string"}, "unit": {"type": "string"}
+    }, "additionalProperties": true},
+    "valueMap": {"type": "object", "additionalProperties": {"$ref": "#/$defs/valueRecord"}}
+  },
+  "additionalProperties": true
+}

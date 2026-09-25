@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Local Retrieval Manifest",
+  "type": "object",
+  "required": ["manifest_version", "namespace", "documents", "network_required"],
+  "properties": {
+    "manifest_version": {"const": "1.0"},
+    "namespace": {"type": "string"},
+    "documents": {"type": "array", "items": {"type": "object", "required": ["doc_id", "source_ref", "sha256"], "properties": {
+      "doc_id": {"type": "string"}, "source_ref": {"type": "string"},
+      "sha256": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"},
+      "captured_utc": {"type": ["string", "null"]}, "classification": {"enum": ["public", "internal", "restricted"]}
+    }, "additionalProperties": false}},
+    "network_required": {"const": false},
+    "embedding_model": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}

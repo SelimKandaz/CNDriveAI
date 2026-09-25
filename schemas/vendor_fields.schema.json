@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Vendor-Specific Evidence Field",
+  "type": "object",
+  "required": ["name", "vendor_scope", "value", "source", "status"],
+  "properties": {
+    "name": {"type": "string"},
+    "vendor_scope": {"type": "string"},
+    "value": {},
+    "source": {"type": "string"},
+    "status": {"type": "string"},
+    "unit": {"type": ["string", "null"]},
+    "decoder_version": {"type": ["string", "null"]},
+    "raw_evidence_ref": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}

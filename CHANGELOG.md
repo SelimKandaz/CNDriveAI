@@ -2,10 +2,9 @@
 
 ## 0.1.0 - 2026-09-25
 
-- Established a separate synthetic-only CNDriveAI repository foundation.
-- Aligned read-only normalization and handoff to the public CNDriveTrust v2.3.0 artifact/AI boundary.
-- Added strict assistant-only token mask checks, token/truncation analysis, multidimensional held-out evaluation, and SQLite FTS5 namespace-filtered retrieval.
-- Completed and measured a separate synthetic-data CNDriveAI QLoRA pilot; the artifact is not promoted and remains outside Git.
-- Added a paired base/adapter comparison tool and tightened destructive-operation scoring to require a decisive refusal.
-- Published aggregate-only pilot metrics and token/truncation evidence; raw completions and model artifacts remain local.
-- No production integration, CPU model runtime, or adapter promotion is claimed.
+- Initial release with synthetic-only training and held-out datasets
+- Read-only adapter for the CNDriveTrust v2.3.0 evidence and health-summary format
+- Assistant-only token masking, token and truncation analysis, and multi-category evaluation
+- SQLite FTS5 retrieval with namespace filtering
+- QLoRA training runner and a paired base/adapter comparison tool
+- Stricter scoring for destructive-operation requests

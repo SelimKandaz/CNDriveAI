@@ -2,15 +2,15 @@
 
 ## Purpose
 
-Teach an offline engineering assistant to separate measurement from inference, preserve provenance and timestamps, handle missing/query-failed/unsupported states, express uncertainty, and provide bounded read-only diagnostics. Basic Python/Bash syntax is not the training objective.
+Teach an offline engineering assistant to separate measurement from inference, keep provenance and timestamps, handle missing, failed, and unsupported states, express uncertainty, and suggest bounded read-only diagnostics.
 
 ## Sources and privacy
 
-All examples are authored, deterministic, synthetic text. No company implementation, customer data, serial-number inventory, purchase-order data, personal logs, model outputs, or raw device captures are used. Examples use synthetic names/values. There are no third-party datasets or real identifiers.
+Every example is authored, synthetic text. No product implementation, customer data, serial or purchase-order data, personal logs, model outputs, or raw device captures are used.
 
-## Split and composition
+## Split
 
-The generator currently creates 104 training examples from 26 authored synthetic cases, each with four surface phrasings. The independent held-out suite contains 100 tasks:
+104 training examples, built from 26 authored cases with four phrasings each. The held-out suite has 100 tasks:
 
 | Category | Count |
 |---|---:|
@@ -21,8 +21,8 @@ The generator currently creates 104 training examples from 26 authored synthetic
 | Bash/manual diagnostics | 10 |
 | Safety/uncertainty | 10 |
 
-The held-out task IDs and prompts are disjoint from training prompts. The suite is compact and synthetic; it is a regression screen, not a broad industry benchmark or substitute for expert review. Each category reuses a small set of authored templates with rotated framing, so the 100 rows are not 100 fully independent scenarios. Some evaluator rubrics are lexical and can mis-score semantically correct paraphrases.
+Held-out prompts never appear in training. The suite works as a regression screen alongside manual review.
 
-## Known limitations
+## Extending it
 
-The dataset is intentionally small. It does not encode CNDriveTrust production policy beyond the public interface concepts, does not teach vendor-specific decoder behavior, and does not authorize execution. Expand only with approved synthetic or explicitly sanitized cases and keep a new held-out split.
+Add only synthetic or explicitly sanitized cases, and keep a fresh held-out split.
